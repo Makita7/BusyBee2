@@ -1,21 +1,30 @@
 import './App.css';
 import { Routes, Route, BrowserRouter as Router }from 'react-router-dom';
 // Pages
-import 
+import Home from './Pages/Home';
+import ToDo from './Pages/ToDoList';
+import Mood from './Pages/MoodTracker';
+// Components
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 
-function App() {
+function App(){
   return (
-    <div>
-      <Router className="App">
-      Header 
+    <div className="container">
+      <Router>
+        <Header/>
 
-      <br/><br/><br/><br/>
+      <br/><br/>
       
       <Routes>
-        <Route path='' element=''/>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/todo' element={<ToDo/>}/>
+        <Route path='/mood' element={<Mood/>}/>
       </Routes>
+      <br/><br/>
+      
+      <Footer/>
 
-      Footer
       </Router>
     </div>
   );

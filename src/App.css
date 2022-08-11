@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600;700&display=swap');
+/*font-family: 'Josefin Slab', serif;*/
+
+
+
+/* GENERAL */
+.container{
+  width: 65rem;
+  height: 40rem;
+  box-sizing: content-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
+  border-radius: 40px;
+  box-shadow: 0px 3px 10px rgb(0, 0, 0, 30%) inset;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  background-image: url(./Assets/decoration.png);
+  background-size: 100% 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Josefin Slab', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  font-family: 'Josefin Slab', serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content{
+  height: 80%;
+}
+
+
+
+/* HEADER */
+
+header{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav{
+  padding: 0.2rem;
+    text-align: end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.divider{
+  width: 33.3rem;
 }
+
+.nav a{
+  padding: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+
+.logo{
+  text-align: center;
+  border: 1px;
+}
+
+.logo a{
+  text-decoration: none;
+  font-size: 1.8em;
+  color: #E56408;
+}
+
+
+
+/*Footer*/
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly !important;
+  margin-bottom: 2rem;
+}
+
+footer iframe{
+  padding: 1.2rem;
+  border: 0px;
+}
+
+
+/* Weather */
+
