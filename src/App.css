@@ -2,7 +2,6 @@
 /*font-family: 'Josefin Slab', serif;*/
 
 
-
 /* GENERAL */
 .container{
   width: 65rem;
@@ -27,8 +26,16 @@ a{
   font-family: 'Josefin Slab', serif;
 }
 
+p{
+  font-family: 'Josefin Slab', serif;
+}
+
 .content{
   height: 15rem;
+}
+
+.flex{
+  display: flex;
 }
 
 
@@ -87,3 +94,71 @@ footer iframe{
 
 /* Weather */
 
+.iconsW{
+  height: 20px;
+  width: auto;
+}
+
+.clock{
+  align-items: baseline;
+  color: #83541A;
+  justify-content: center;
+}
+
+.time{
+  font-size: 4.5em;
+  font-weight: 400;
+}
+
+.pm{
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.centered{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.date{
+  font-size: 4.5em;
+  color: #83541A;
+  font-weight: 400;
+}
+
+.year{
+  font-size: 2.5em;
+  margin-top: -4.5rem;
+  color: #83541A;
+  font-weight: 600;
+}
+
+.icon{
+  color: #E68A0D;
+  padding-right: 1rem;
+}
+
+.BigWContainer{
+  align-items: center;
+  justify-content: center;
+}
+
+.BigW{
+  font-size: 4.5em;
+  color: #83541A;
+}
+
+.smallW{
+  font-size: 1em;
+  color: #83541A;
+  justify-content: center;
+  margin-top: -4rem;
+}
+
+.smallW p{
+  padding: 0 0.5rem;
+  font-size: 1.2em;
+  font-weight: 700;
+}

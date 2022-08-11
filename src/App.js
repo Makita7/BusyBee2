@@ -5,8 +5,8 @@ import Home from './Pages/Home';
 import ToDo from './Pages/ToDoList';
 import Mood from './Pages/MoodTracker';
 // Components
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
 
 function App(){
   return (
