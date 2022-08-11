@@ -30,9 +30,9 @@ p{
   font-family: 'Josefin Slab', serif;
 }
 
-.content{
+/* .content{
   height: 15rem;
-}
+} */
 
 .flex{
   display: flex;
@@ -93,6 +93,10 @@ footer iframe{
 
 
 /* Weather */
+
+.contentWOne{
+  height: 7rem;
+}
 
 .iconsW{
   height: 20px;
@@ -161,4 +165,53 @@ footer iframe{
   padding: 0 0.5rem;
   font-size: 1.2em;
   font-weight: 700;
+}
+
+
+/* Days Weather */
+.dividerTwo{
+  width: 20%;
+}
+
+.WDays{
+  margin-top: -1rem;
+}
+
+.contentWDays{
+  height: 7rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.iconDays{
+  color: #E68A0D;
+  padding-right: 0.5rem;
+}
+
+.BigWdays{
+  font-size: 3em;
+  color: #37250F;
+  font-weight: 400;
+}
+
+.smallWDays{
+  margin-top: -3rem;
+}
+
+.ContainerDays{
+  align-items: center;
+}
+
+.smallWDays p{
+  font-size: 1em;
+  font-weight: 700;
+  padding: 0.5rem 0.5rem;
+}
+
+.WlineTop{
+  margin-top: 3.5rem;
+}
+
+.WlineBottom{
+  margin-top: 3.5rem;
 }

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Sun } from 'react-feather';
 import Clock from '../Components/Weather/Clock';
 import Date from '../Components/Weather/Date';
+import DaysWeather from '../Components/Weather/DaysWeather';
+import Weather from '../Components/Weather/Weather';
 
 
 
@@ -9,25 +9,19 @@ function Home() {
     
   return (
     <div className='content'>
-      <div className='flex centered'>
+      <div className='flex centered contentWOne'>
 
         <Clock/>
 
         <Date/>
 
-        <div className='divider'>
-          <div className='flex BigWContainer'>
-            <Sun size={100} className='icon' strokeWidth={0.8}/>
-            <p className='BigW'>13°C</p>
-          </div>
-
-          <div className='flex smallW'>
-            <p>max: 20°C</p>
-            <p>min: 5°C</p>
-          </div>
-        </div>
+        <Weather/>
       
       </div>
+
+      <hr className='WlineTop'/>
+      <DaysWeather/>
+      <hr className='WlineBottom'/>
     </div>
   )
 }

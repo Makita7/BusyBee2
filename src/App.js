@@ -13,15 +13,12 @@ function App(){
     <div className="container">
       <Router>
         <Header/>
-
-      <br/><br/>
       
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/todo' element={<ToDo/>}/>
         <Route path='/mood' element={<Mood/>}/>
       </Routes>
-      <br/><br/>
       
       <Footer/>
 
