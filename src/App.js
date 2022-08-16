@@ -2,7 +2,7 @@ import './App.css';
 import { Routes, Route, BrowserRouter as Router }from 'react-router-dom';
 // Pages
 import Home from './Pages/Home';
-import ToDo from './Pages/ToDoList';
+import ToDo from './Pages/ToDo';
 import Mood from './Pages/MoodTracker';
 // Components
 import Header from './Components/Header/Header';
@@ -20,7 +20,7 @@ function App(){
         <Route path='/mood' element={<Mood/>}/>
       </Routes>
       
-      <Footer/>
+      {/* <Footer/> */}
 
       </Router>
     </div>

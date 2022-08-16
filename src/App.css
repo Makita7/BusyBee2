@@ -30,9 +30,10 @@ p{
   font-family: 'Josefin Slab', serif;
 }
 
-/* .content{
-  height: 15rem;
-} */
+button{
+  background-color: #37250f00;
+  border: 0px;
+}
 
 .flex{
   display: flex;
@@ -214,4 +215,38 @@ footer iframe{
 
 .WlineBottom{
   margin-top: 3.5rem;
+}
+
+
+
+/* ToDo */
+.list{
+  display: flex;
+  margin-top: 0.8rem;
+  align-items: center;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.completeT{
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+
+.incomplete{
+  color: rgb(165, 165, 165);
+  text-decoration: line-through;
+}
+
+.todoToggle{
+  border: 0px;
+  background-color: #37250f00;
+}
+
+.todoToggle img{
+  max-height: 2.5rem;
+}
+
+.editBtn{
+  margin-bottom: 0.2rem !important;
 }
