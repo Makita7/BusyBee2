@@ -374,3 +374,23 @@ form{
 .mood{
   height: 52%;
 }
+
+.emotionList{
+  justify-content: center;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: flex;
+}
+
+.emotionIcon{
+  max-height: 4rem;
+}
+
+/* Calendar */
+
+.CalendarContainer{
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: 2rem;
+}

@@ -20,7 +20,7 @@ function App(){
         <Route path='/mood' element={<Mood/>}/>
       </Routes>
       
-      <Footer/>
+      {/* <Footer/> */}
 
       </Router>
     </div>
