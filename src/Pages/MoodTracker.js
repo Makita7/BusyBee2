@@ -2,7 +2,7 @@ import React from 'react'
 
 function MoodTracker() {
   return (
-    <div>MoodTracker</div>
+    <div className='mood'>MoodTracker</div>
   )
 }
 

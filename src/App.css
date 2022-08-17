@@ -37,6 +37,7 @@ button{
 
 .flex{
   display: flex;
+  flex-direction: row;
 }
 
 
@@ -220,27 +221,131 @@ footer iframe{
 
 
 /* ToDo */
+.todo{
+  padding-top: 1rem;
+  height: 50%;
+  max-height: 50% !important;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+/* Scrollbar styling */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C03600; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #C03600; 
+}
+
+
+.todo button{
+  margin: 0 0.3rem;
+  background-color: #ffe2b9;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.todo ul{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.todo li{
+  margin-top: -1.8rem;
+  padding-top: 0;
+}
+
+form{
+  margin: 0.5rem 20% 2rem 20%;
+  width: 67.8%;
+}
+
+.inputTodo{
+  width: 87%;
+  border-radius: 5px;
+  padding: 7px;
+  border-color: #83541a7e;
+  border-width: 2px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 600;
+  color: #37250F;
+  text-transform: capitalize;
+}
+
+.inputTodo ::placeholder{
+  font-family: 'Josefin Slab', serif;
+  color: #37250F;
+}
+
+.submitBtn{
+  margin-left: 1rem;
+}
+
+.EditInput{
+  width: 100%;
+  margin-right: 2rem;
+}
+
+.EditInput input{
+  width: 27.7rem;
+  border-radius: 5px;
+  padding: 7px;
+  border-color: #83541a7e;
+  border-width: 2px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 600;
+  color: #37250F;
+  text-transform: capitalize;
+}
+
 .list{
   display: flex;
-  margin-top: 0.8rem;
+  margin-top: -1.5rem !important;
   align-items: center;
   width: 50%;
-  margin-left: 25%;
+  margin-left: 15%;
+}
+
+.item{
+  width: 30rem;
 }
 
 .completeT{
   color: rgb(0, 0, 0);
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 1.7em;
+  word-wrap:break-word;
 }
 
 .incomplete{
   color: rgb(165, 165, 165);
   text-decoration: line-through;
+  font-weight: 600;
+  font-size: 1.7em;
+  word-wrap:break-word;
 }
 
 .todoToggle{
   border: 0px;
-  background-color: #37250f00;
+  background-color: #37250f00 !important;
 }
 
 .todoToggle img{
@@ -249,4 +354,23 @@ footer iframe{
 
 .editBtn{
   margin-bottom: 0.2rem !important;
+}
+.addBtn{
+  margin-left: 0.5rem !important;
+}
+
+.todo-actions{
+  display: flex;
+  width: 100%;
+}
+
+.DAll{
+  margin-left: 87% !important;
+}
+
+
+/* MOOD */
+
+.mood{
+  height: 52%;
 }

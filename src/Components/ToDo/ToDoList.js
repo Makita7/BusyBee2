@@ -3,6 +3,7 @@ import Hex1 from '../../Assets/hexagon1.png';
 import Hex2 from '../../Assets/hexagon2.png';
 
 function ToDoList({input, setInput,todoList, setTodoList, editTodo, setEditTodo, editText, setEditText}){
+
     const DTask = (e, id) => {
         e.preventDefault();
         setTodoList(todoList.filter( (t) => t.id != id ))
@@ -47,7 +48,6 @@ function ToDoList({input, setInput,todoList, setTodoList, editTodo, setEditTodo,
             }
         );
 
-
         setTodoList(updatedList);
         setEditTodo(null);
         setEditText('');
@@ -71,7 +71,7 @@ function ToDoList({input, setInput,todoList, setTodoList, editTodo, setEditTodo,
                         }
 
 
-                    <div>
+                    <div className='EditInput'>
                         {t.id === editTodo ? (
                                 <input
                                     type="text"
@@ -80,19 +80,19 @@ function ToDoList({input, setInput,todoList, setTodoList, editTodo, setEditTodo,
                                 />
 
                             ) : (
-                                    <p className={t.Complete ? 'incomplete' : 'completeT'}>{t.value}</p>
+                                    <p className={t.Complete ? 'incomplete item' : 'completeT item'}>{t.value}</p>
                                     )}
-                        </div>
-
-                        <div className="todo-actions">
-                                {t.id === editTodo ? (
-                                <button onClick={() => SubmitEdit(t.id)}>Submit</button>
-                            ) : (
-                            <button className="editBtn" onClick={() => setEditTodo(t.id, t.value)}>Edit</button>
-                        )}
                     </div>
 
+                    <div className="todo-actions">
+                                {t.id === editTodo 
+
+                                ? <button className='submitBtn' onClick={() => SubmitEdit(t.id)}>Submit</button>
+                                : <button className="editBtn" onClick={() => setEditTodo(t.id, t.value)}>Edit</button>
+                            }
                         <button onClick={e => DTask(e, t.id)}>Delete</button>
+                    </div>
+
                     </li>
                 )}
             </ul>

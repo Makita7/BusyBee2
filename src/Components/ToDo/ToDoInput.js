@@ -25,7 +25,7 @@ function ToDoInput({ setInput, input, setTodoList, todoList }) {
                 type='text'
                 name="text"
                 id='text'
-                className='input'
+                className='inputTodo'
                 placeholder='Task...'
                 minlength='5'
                 onChange={(e) => Submit(e)}

@@ -6,7 +6,7 @@ function DeleteAllBtn({setTodoList}) {
     }
 
   return (
-    <button onClick={DAll}>Delete All</button>
+    <button className='DAll' onClick={DAll}>Delete All</button>
   )
 }
 

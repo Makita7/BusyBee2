@@ -12,14 +12,14 @@ function ToDo() {
     const [editText, setEditText] = useState('');
 
   return (
-    <>
+    <div className='todo'>
         <ToDoInput input={input} setInput={setInput} todoList={todoList} setTodoList={setTodoList} />
-        <br/>
 
         <ToDoList input={input} setInput={setInput} todoList={todoList} setTodoList={setTodoList} editTodo={editTodo} setEditTodo={setEditTodo} editText={editText} setEditText={setEditText} />
-        <br/>
+
         <DeleteAllBtn setTodoList={setTodoList} />
-    </>
+        
+    </div>
   )
 }
 
