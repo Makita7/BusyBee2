@@ -1,8 +1,13 @@
 
+import { useEffect } from 'react';
 import Hex1 from '../../Assets/hexagon1.png';
 import Hex2 from '../../Assets/hexagon2.png';
 
 function ToDoList({input, setInput,todoList, setTodoList, editTodo, setEditTodo, editText, setEditText}){
+
+    useEffect( () => {
+        localStorage.setItem('todoStorage', JSON.stringify(todoList));
+    },[todoList])
 
     const DTask = (e, id) => {
         e.preventDefault();
@@ -64,7 +69,7 @@ function ToDoList({input, setInput,todoList, setTodoList, editTodo, setEditTodo,
                         <button className='todoToggle' onClick={e => UTask(e, t.id)}>
                             <img src={Hex2} alt="toggle button part 2"/>
                         </button>
-                        
+
                         :<button className='todoToggle' onClick={e => CTask(e, t.id)}>
                             <img src={Hex1} alt="toggle button part 1"/>
                         </button>
@@ -85,7 +90,7 @@ function ToDoList({input, setInput,todoList, setTodoList, editTodo, setEditTodo,
                     </div>
 
                     <div className="todo-actions">
-                                {t.id === editTodo 
+                                {t.id === editTodo
 
                                 ? <button className='submitBtn' onClick={() => SubmitEdit(t.id)}>Submit</button>
                                 : <button className="editBtn" onClick={() => setEditTodo(t.id, t.value)}>Edit</button>
@@ -97,7 +102,7 @@ function ToDoList({input, setInput,todoList, setTodoList, editTodo, setEditTodo,
                 )}
             </ul>
         : null}
-        
+
         </>
     );
 }

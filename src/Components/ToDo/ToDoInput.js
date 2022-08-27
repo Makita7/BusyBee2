@@ -27,7 +27,7 @@ function ToDoInput({ setInput, input, setTodoList, todoList }) {
                 id='text'
                 className='inputTodo'
                 placeholder='Task...'
-                minlength='5'
+                minLength='5'
                 onChange={(e) => Submit(e)}
                 />
             <button className='addBtn' onClick={AddTodo}>Add</button>

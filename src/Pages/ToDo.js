@@ -7,7 +7,7 @@ import DeleteAllBtn from '../Components/ToDo/DeleteAllBtn.js';
 
 function ToDo() {
     const [input, setInput ] = useState('');
-    const [todoList, setTodoList] = useState([]);
+    const [todoList, setTodoList] = useState( JSON.parse(localStorage.getItem('todoStorage')) || [] );
     const [editTodo, setEditTodo] = useState(null);
     const [editText, setEditText] = useState('');
 
@@ -18,7 +18,7 @@ function ToDo() {
         <ToDoList input={input} setInput={setInput} todoList={todoList} setTodoList={setTodoList} editTodo={editTodo} setEditTodo={setEditTodo} editText={editText} setEditText={setEditText} />
 
         <DeleteAllBtn setTodoList={setTodoList} />
-        
+
     </div>
   )
 }
