@@ -11,8 +11,6 @@ import Sad from '../Assets/sad.png';
 import Angry from '../Assets/angry.png';
 
 
-
-
 function MoodTracker() {
   const [emotion, setEmotion ] = useState( JSON.parse(localStorage.getItem('currentEmotion')) || '');
   const [ date, setDate ] = useState('');
@@ -54,6 +52,10 @@ function MoodTracker() {
     },
   ]
 
+  /* reset info in StoredMoods once a day
+    reset currentEmotion once a month
+  */
+
   useEffect( () => {
     localStorage.setItem('StoredMoods', JSON.stringify(log));
   }, [log]);
@@ -63,8 +65,16 @@ function MoodTracker() {
   }, [emotion]);
 
 
+  //reset Stored Moods once a month
+  const today = moment().format("Do");
+
+  useEffect( () => {
+    if(today === '1st'){
+      localStorage.setItem('StoredMoods', JSON.stringify(''));
+    }
+  }, [])
+
   const Choose = ( src, name ) => {
-    //save data to local storage and make it delete itself once every month
     setEmotion(src);
     setDate((moment().format('dddd Do')));
 
@@ -98,8 +108,6 @@ function MoodTracker() {
   const ResetEmotion = () =>{
     setEmotion('');
   }
-
-
 
   return (
     <div className='mood'>
