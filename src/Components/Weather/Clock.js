@@ -1,14 +1,22 @@
 import moment from 'moment';
+import { useEffect, useState } from 'react';
 
 
 function Clock(){
-    let Time = moment().format('h:mm');
-    let TimeTwo = moment().format('A');
-  
+    const [time, setTime] = useState(moment().format('h:mm'));
+    const [timeTwo, setTimeTwo] = useState(moment().format('A'));
+
+    useEffect(() => {
+      const Interval = setInterval(() => {
+        setTime(moment().format('h:mm'));
+        setTimeTwo(moment().format('A'))
+      }, 20000)
+    }, [time])
+
     return(
       <div className="clock flex divider">
-          <p className='time'>{Time}</p>
-          <p className="pm">{TimeTwo}</p>
+          <p className='time'>{time}</p>
+          <p className="pm">{timeTwo}</p>
       </div>
     );
   }

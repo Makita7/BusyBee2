@@ -6,7 +6,6 @@ import Weather from '../Components/Weather/Weather';
 
 
 function Home() {
-    
   return (
     <div className='content'>
       <div className='flex centered contentWOne'>
@@ -16,7 +15,6 @@ function Home() {
         <Date/>
 
         <Weather/>
-      
       </div>
 
       <hr className='WlineTop'/>
